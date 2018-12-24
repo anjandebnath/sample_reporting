@@ -16,8 +16,12 @@ android:
     - addon-google_apis-google-25
     - sys-img-armeabi-v7a-android-22
 
-before_install: 
+licenses:
+    - 'android-sdk-license-.+'
+
+before_install:
   - "chmod +x gradlew"
+  - yes | sdkmanager "platforms;android-25"
 
 # Emulator Management: Create, Start and Wait
 before_script:
