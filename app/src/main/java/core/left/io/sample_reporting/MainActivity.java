@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import core.left.io.sample_reporting.databinding.ActivityMainBinding;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                             calculator.add(
                                     Double.parseDouble(binding.etNum1.getText().toString()),
                                     Double.parseDouble(binding.etNum2.getText().toString()))));
+
+                    Log.e("MainActivity", "Button Clicked");
                 }
             }
         });
